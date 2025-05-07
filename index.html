@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Big Dick Ritter</title>
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            transition: opacity 1s ease;
+        }
+    </style>
+</head>
+<body>
+    <img id="mainImage" src="images/IMG_2339.JPG" alt="Cycling Image">
+    <script>
+        const images = [
+            "images/IMG_2339.JPG",
+            "images/IMG_2495.jpg",
+            "images/IMG_3014.JPG",
+            "images/IMG_3237.JPG",
+            "images/IMG_3633.JPG",
+            "images/IMG_3715.JPG"
+        ];
+        let index = 0;
+        const imgElement = document.getElementById("mainImage");
+
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            imgElement.style.opacity = 0;
+            setTimeout(() => {
+                imgElement.src = images[index];
+                imgElement.style.opacity = 1;
+            }, 500);
+        }, 3000); // Change every 3 seconds
+    </script>
+</body>
+</html>
 
